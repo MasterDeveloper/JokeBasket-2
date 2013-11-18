@@ -18,6 +18,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Home Page</title>
+    
+    <link href='http://fonts.googleapis.com/css?family=Oxygen:400,700,300' rel='stylesheet' type='text/css'>
+    
     <link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
     <link type="text/css" rel="stylesheet" href="css/bootstrap-theme.css" />
     <link type="text/css" rel="stylesheet" href="css/font-awesome.css" />
@@ -44,22 +47,21 @@
 
 <!--header start -->
 <div id="header-wrap">
+<div class="pattren-header"></div>
 	<div class="container">
         <header id="header" class="row">
-        	<div class="col-md-5 visible-lg visible-md" >
-	            <span class="header-social-icons">
-                    <a href="#"><span class="icon-facebook"></span></a>
-                    <a href="#"><span class="icon-twitter"></span></a>
-                    <a href="#"><span class="icon-google-plus"></span></a>
-                    <a href="#"><span class="icon-pinterest"></span></a>
-                    <a href="#"><span class="icon-youtube-play"></span></a>
-                </span>
+            <div id="header-right" class="col-md-7 col-sm-12">
+                    <a href="#myModal" role="button"  data-toggle="modal"class="btn btn-default btn-xs">&nbsp;&nbsp;&nbsp;Log In&nbsp;&nbsp;&nbsp;</a>
+                    <a href="#myModal-2" role="button"  data-toggle="modal" class="btn btn-default btn-xs">Register</a>
             </div>
-            <div id="header-right" class="col-md-7 col-sm-12 text-right">
-            		<a href="#" class="btn btn-facebook"><span class="icon-facebook"></span>  &nbsp;Connect using Facebook</a>
-                    <a href="#myModal" role="button"  data-toggle="modal"class="btn btn-default">&nbsp;&nbsp;&nbsp;Log In&nbsp;&nbsp;&nbsp;</a>
-                    <a href="#myModal-2" role="button"  data-toggle="modal" class="btn btn-yellow">Register Now</a>
-                </div>
+            <div class="col-md-5 visible-lg visible-md text-right" >
+	            <span class="header-social-icons">
+                    <a href="#" class="facebook"><span class="icon-facebook"></span></a>
+                    <a href="#" class="tumblr"><span class="icon-tumblr"></span></a>
+                    <a href="#" class="linkedin"><span class="icon-linkedin"></span></a>
+                    <a href="#" class="youtube"><span class="icon-youtube"></span></a>
+                    <a href="#" class="rss"><span class="icon-rss"></span></a>
+                </span>
             </div>
         </header>
     </div>
@@ -69,7 +71,7 @@
 
 <!--navigation start -->
 <div id="nav-wrap">
-    <nav class="navbar navbar-transparent" role="navigation">
+    <nav class="navbar" role="navigation">
       <!-- Brand and toggle get grouped for better mobile display -->
       	<div class="container">
           <div class="navbar-header">
@@ -85,22 +87,85 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#"><span class="icon-home"></span> Home</a></li>
-              <li><a href="#"><span class="icon-align-left"></span> Topics</a></li>
-              <li><a href="#"><span class="icon-user"></span> Authors</a></li>
-              <li><a href="#"><span class="icon-picture"></span> Picture</a></li>
+              <li class="active"><a href="#"><span class="icon-home"></span></a></li>
+              <li><a href="#">Latest</a></li>
+              <li><a href="#">Random</a></li>
+              <li><a href="#">Top Rated</a></li>
+              <li><a href="#">Most Liked</a></li>
+              <li><a href="#">Most viewed</a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
 		</div>
     </nav>
 </div>
 <!--navigation end -->
+<div class="banner-wrap">
+	<div class="container">
+    	<div class="inner-section text-center">
+            <h1><small>Search from over</small> 
+    1000,000+ Jokes !</h1>
+		</div>
+    </div>
+</div>
+<div class="search-wrap">
+	<div class="container">
+    	
+        <div class="left-side">
+            <div class="right-side">
+            	<div class="inner-section">
+	                <form role="form" class="form-inline">
+	                  <button class="btn btn-lg pull-right" type="submit"><span class="icon-search"></span></button>
+                      <div class="form-group">
+                        <input type="email" placeholder="Search from over 1000,000+ Jokes..." id="exampleInputEmail2" class="form-control input-lg">
+                      </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="shadow-bottom"></div>
+    </div>
+</div>
 <!--main start -->
 <div id="main-wrap">
 	<div class="container">
         <div id="main" class="row author-gallery-wrap author-gallery-wrap-2">
         	<div class="col-sm-9">
-            	
+            	<div class="theme-box">
+                	<div class="box-header">
+                    	<h2><img src="images/sumily-face.png" alt="" /> <span>Picture Jokes</span></h2>
+                    </div>
+                    <div class="box-body">
+                    	<div class="row">
+                        	<div class="col-sm-4"><img src="images/joke-pic-1.jpg" alt="" class="img-thumbnail thumbnail-lg" /></div>
+                            <div class="col-sm-4"><img src="images/joke-pic-1.jpg" alt="" class="img-thumbnail thumbnail-lg" /></div>
+                            <div class="col-sm-4"><img src="images/joke-pic-1.jpg" alt="" class="img-thumbnail thumbnail-lg" /></div>
+                            <div class="col-sm-4"><img src="images/joke-pic-1.jpg" alt="" class="img-thumbnail thumbnail-lg" /></div>
+                            <div class="col-sm-4"><img src="images/joke-pic-1.jpg" alt="" class="img-thumbnail thumbnail-lg" /></div>
+                            <div class="col-sm-4"><img src="images/joke-pic-1.jpg" alt="" class="img-thumbnail thumbnail-lg" /></div>
+                            <div class="col-sm-4"><img src="images/joke-pic-1.jpg" alt="" class="img-thumbnail thumbnail-lg" /></div>
+                            <div class="col-sm-4"><img src="images/joke-pic-1.jpg" alt="" class="img-thumbnail thumbnail-lg" /></div>
+                            <div class="col-sm-4"><img src="images/joke-pic-1.jpg" alt="" class="img-thumbnail thumbnail-lg" /></div>
+                            <div class="col-sm-4"><img src="images/joke-pic-1.jpg" alt="" class="img-thumbnail thumbnail-lg" /></div>
+                            <div class="col-sm-4"><img src="images/joke-pic-1.jpg" alt="" class="img-thumbnail thumbnail-lg" /></div>
+                            <div class="col-sm-4"><img src="images/joke-pic-1.jpg" alt="" class="img-thumbnail thumbnail-lg" /></div>
+                            <div class="col-sm-4"><img src="images/joke-pic-1.jpg" alt="" class="img-thumbnail thumbnail-lg" /></div>
+                        </div>
+                    </div>
+                    <div class="box-footer"></div>
+                </div>
+                <div class="theme-tabs-wrap">
+                    <ul class="nav nav-tabs">
+                        <li><a href="#home" data-toggle="tab">Home</a></li>
+                        <li><a href="#profile" data-toggle="tab">Profile</a></li>
+                    </ul>
+	                <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="home">TAb Content Here</div>
+                        <div class="tab-pane" id="profile">TAb Content Here...</div>
+                    </div>
+				</div>
+                
+                
             </div><!-- col-sm-9 -->
             <div class="col-sm-3">
                 <aside id="sidebar">
@@ -115,12 +180,13 @@
 
 <!--footer start -->
 <div id="footer-wrap">
-	<div class="container">
-        <footer id="footer">
+	<footer id="footer">
+		<div class="container">
+        
         	
         	
-        </footer>
-    </div>
+	    </div>
+    </footer>
     <div id="footer-bottom">
     	<div class="footer-bottom">
             <div class="container">
@@ -161,7 +227,7 @@
     <div class="model-wrap">
         <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h3 id="myModalLabel">Register Now</h3>
+        <h3 id="myModalLabel">Register</h3>
         </div>
         <div class="modal-body">
             <form  class="row">
@@ -176,7 +242,7 @@
                     <p><input type="text" placeholder="Password" class="form-control"></p>
                     <label>Confirm Password</label>    
                     <p><input type="text" placeholder="Confirm Password" class="form-control"></p>
-                    <button class="btn btn-primary col-sm-6 col-xs-6">Register Now</button>
+                    <button class="btn btn-primary col-sm-6 col-xs-6">Register</button>
                 </div>
             </form>
         </div>

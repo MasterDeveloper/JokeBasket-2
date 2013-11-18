@@ -24,7 +24,7 @@ body, input, select, textarea{
 	color: @textColor;
 }
 body{
-	background:@bodybg url(../images/pattren-1.jpg);
+	background:@bodybg;
 }
 
 /* Headings
@@ -35,8 +35,19 @@ ______________________*/
 	margin: @margin;
 	
 }
-h1{.heading( bold,  24px,  @baseFamily, @bannerColor, 0 0 20px);}
-h2{.heading( 200,  52px,  @altFamily, black, 0 0 10px);}
+h1{.heading( bold,  53px,  @baseFamily, @headingsColor, 0 0 20px);
+	small{
+		font-size:0.666em;
+		display:block;
+		color:inherit;
+		font-weight:bold;
+	}
+}
+h2{.heading( 700,  52px,  @altFamily, #b6991f, 0 0 10px);
+	*{
+		vertical-align:middle;
+	}
+}
 h3{.heading( 100,  26px,  @altFamily, inherit, 0 0 10px);}
 h4{.heading( bold,  16px,  @baseFamily, inherit, 0 0 10px);}
 
@@ -64,23 +75,270 @@ p{
 	margin-bottom:15px;
 }
 
+/************************
+	Theme Gradient Settings 
+*************************/
+.theme-gradient{
+	.gradient(@themeGradient1, @themeGradient2);
+}
+.btn-hover{
+	.gradient(#efd97e, #dcc566);
+}
+
 /* Header
 ______________________*/
 #header-wrap{
+	background: @headerColor;
+	position:relative;
+	padding:15px;
+}
+	.pattren-header{
+		background:url(../images/pattren-1.png) repeat-x;
+		height:4px;
+		position:absolute;
+		left:0;
+		right:0;
+		top:100%;
 	}
 #header-right{
 }
 
+.header-social-icons{
+	a{
+		color:white;
+		border:1px solid #797e55;
+		display:inline-block;
+		text-align:center;
+		width:30px;
+		height:30px;
+		.radius(@baseRadius + 4px);
+		.opacity(1);
+		&:hover{
+			.opacity(0.8);
+		}
+		span{
+			line-height:28px;
+			font-size:20px;
+		}
+		&.facebook{
+			background: #1b5b9b;
+		}
+		&.tumblr{
+			background: #166e98;
+		}
+		&.linkedin{
+			background: #3593ab;
+		}
+		&.youtube{
+			background:white;
+			span{
+				color: red;
+			}
+		}
+		&.rss{
+			background: #f79b2a;
+		}
+	}
+}
 /* Navigation
 ______________________*/
 #nav-wrap{
 }
+.navbar{
+	.gradient(@navbarColor1, @navbarColor2);
+	padding:40px 0;
+	min-height:125px;
+	position:static;
+	margin-bottom:0;
+}
+.navbar-brand{
+	padding:0;
+}
+.navbar-nav > {
+	li{
+		margin-left:4px;
+		> a{
+			display: inline-block;
+			padding: 6px 12px;
+			white-space: nowrap;
+			vertical-align: middle;
+			cursor: pointer;
+			border: 1px solid #d6d6d6;
+			color: @gray;
+			.radius(@baseRadius);
+			.gradient(#fbfbfb, #d7d7d7);
+			&:hover,
+			&:focus{
+				text-shadow:none;
+				border-color: @borderColor;
+				.btn-hover;
+				
+			}
+			[class^="icon-"]{
+				font-size:1.5em;
+				line-height:20px;
+			}
+		}
 
+		&.active{
+			a{
+				text-shadow:none;
+				border-color: @borderColor;
+				.btn-hover;
+			}
+		}
+	}
+}
 /************************
 	Banner Settings 
 *************************/
 .banner-wrap{
+	background:url(../images/banner.png) no-repeat center bottom;
+	min-height:240px;
+	.inner-section{
+		padding:25px 0;
+	}
+}
 
+
+/************************
+	Search wrap Settings 
+*************************/
+.search-wrap{
+	.inner-section{
+		background: @searchWrap;
+		min-height:101px;
+		padding:20px 0;
+	}
+	input{
+		background: #66a64c;
+		color: white;
+	}
+	.form-group{
+		display:inherit;
+		margin-right:100px;
+	}
+	.form-control:-moz-placeholder {
+	  color: white;
+	}
+	
+	.form-control::-moz-placeholder {
+	  color: white;
+	}
+	
+	.form-control:-ms-input-placeholder {
+	  color: white;
+	}
+	
+	.form-control::-webkit-input-placeholder {
+	  color:white;
+	}
+
+	.input-lg{
+		height:53px;
+		line-height:31px;
+	}
+	.btn-lg{
+		height:53px;
+		line-height:31px;
+	}
+	.icon-search{
+		font-size:1.7em;
+	}
+	.btn{
+		color: white;
+		background: #66a64c;
+	}
+}
+
+
+
+.shadow-bottom{
+	background:url(../images/bottom-shadow.png) no-repeat center top;
+	background-size: 100% auto;
+	padding-bottom:45px;
+}
+.left-side{
+	background:url(../images/left-corner.png) no-repeat;
+	background-size: auto 100%;
+	padding-left:44px;
+}
+.right-side{
+	background:url(../images/right-corner.png) no-repeat right;
+	background-size: auto 100%;
+	padding-right:44px;
+}
+
+/******************************
+	Theme Box Settings 
+*******************************/
+.theme-box{
+	background:@themeBg;
+	border:1px solid @borderColor;
+	margin-bottom:30px;
+	.radius(@baseRadius);
+	overflow:hidden;
+	.box-header{
+		.theme-gradient;
+		padding:10px;
+	}
+	.box-body{
+		padding:10px;
+	}
+	.box-footer{
+		border-top:1px solid @borderColor;
+		padding:10px;
+		.box-shadow(0 1px 0 white inset);
+	}
+}
+
+
+/**********************
+	 Theme Tabs
+ **********************/
+.theme-tabs-wrap{
+
+}
+.nav-tabs {
+	border-bottom:none;
+	> li{
+		margin-right:5px;
+		border: 1px solid @borderColor;
+		border-bottom:none;
+		.radius(@baseRadius @baseRadius 0 0);
+		.theme-gradient;
+		> a{
+			margin:4px 4px -1px;
+			&:focus,
+			&:hover{
+				background:	@themeBg;
+				color: @linkHoverColor;
+				border-color:@borderColor;
+				border-bottom-color:transparent;
+			}
+		}
+		&.active{
+			a{
+				background:	@themeBg;
+				color: @linkHoverColor;
+				border-color:@borderColor;
+				border-bottom-color:transparent;
+				&:focus{
+					background:	@themeBg;
+					color: @linkHoverColor;
+					border-color:@borderColor;
+					border-bottom-color:transparent;
+				}
+			}
+		}
+	}
+	
+}
+.tab-content{
+	border:1px solid @borderColor;
+	background:@themeBg;
+	padding:10px 40px;
+	.radius(0 0 @baseRadius @baseRadius);
 }
 
 
@@ -88,6 +346,7 @@ ______________________*/
 /******************************
 	Pagination Settings 
 *******************************/
+
 .theme-pagination{
 
 }
@@ -129,21 +388,19 @@ ______________________*/
 
 
 #footer-wrap{
-
+	.theme-gradient;
 }
 #footer{
-}
-/**********************
-	 Theme Tabs
- **********************/
-.theme-tabs{
-
-}
-.tab-pane{
-	padding:25px 0 0;
+	background:url(../images/footer.png) no-repeat center bottom;
+	min-height:370px;
 }
 
-
+.footer-bottom{
+	background: @footerBottom;
+	color: #dce0eb;
+	padding:25px 15px 5px;
+	text-align:center;
+}
 
 /**********************
 	 SignUp/Login
@@ -151,13 +408,13 @@ ______________________*/
 .model-wrap{
 	max-width:600px;
 	margin:15px auto;
-	background:white;
+	background: @themeBg;
 	border:5px solid @themeColor;
 	border-radius: 15px;
-	.form-control:focus{
-		border-color:@themeColor;
-		box-shadow:	0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(0, 182, 173, 0.6);
-	}
+}
+.modal-footer,
+.modal-header{
+	border-color: @borderColor;
 }
 .model-wrap h3{
 	margin:10px 0;
@@ -173,9 +430,22 @@ ______________________*/
 }
 .form-control:focus{
 	border-color:@themeColor;
-	box-shadow:	0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(0, 182, 173, 0.6);
+	box-shadow:	0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(171, 139, 10, 0.6);
+}
+.btn-default{
+	border-color: @btnBorder;
+	.radius(@baseRadius);
+	color: @gray;
 }
 
+.btn{
+	min-width: 80px;
+}
+
+.thumbnail-lg{
+	padding:10px;
+	.radius(0);
+}
 
 
 /**********************
@@ -213,16 +483,55 @@ ______________________*/
  *****************************/
 
 @media (max-width: 1200px){
+.shadow-bottom{
+	background-size: 99% auto;
+	padding-bottom:40px;
+}
 
 
 }
 @media (max-width: 979px) {
+.shadow-bottom{
+	background-size: 97% auto;
+	padding-bottom:35px;
+}
 
 }
 @media (max-width: 767px) {
-/**********************
-	 SignUp/Login
- **********************/
+.shadow-bottom{
+	background-size: 93% auto;
+	padding-bottom:35px;
+}
+
+.navbar-nav > {
+	li{
+		> a{
+			display:block;
+			border:none;
+			.radius(0);
+		}
+	}
+	
+}
+.navbar-header{
+	.navbar-toggle{
+		.btn-hover;
+		margin-top:0;
+		span{
+			background: white;
+		}
+		
+	}
+}
+.rtl{
+	.navbar-nav > {
+		li{
+			> a{
+				text-align:right;
+			}
+		}
+	}
+}
 
 
 /**********************
@@ -234,5 +543,9 @@ ______________________*/
 
 }
 @media (max-width: 479px) {
+.shadow-bottom{
+	background-size: 90% auto;
+	padding-bottom:35px;
+}
 
 }
