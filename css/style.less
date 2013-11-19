@@ -43,13 +43,13 @@ h1{.heading( bold,  53px,  @baseFamily, @headingsColor, 0 0 20px);
 		font-weight:bold;
 	}
 }
-h2{.heading( 700,  52px,  @altFamily, #b6991f, 0 0 10px);
+h2{.heading( 700,  52px,  @baseFamily, @yellowdark, 0 0 10px);
 	*{
 		vertical-align:middle;
 	}
 }
-h3{.heading( 100,  26px,  @altFamily, inherit, 0 0 10px);}
-h4{.heading( bold,  16px,  @baseFamily, inherit, 0 0 10px);}
+h3{.heading( 400,  26px,  @baseFamily, @SubheadingsColor, 0 0 10px);}
+h4{.heading( bold,  18px,  @baseFamily, @SubheadingsColor, 0 0 10px);}
 
 /* Links
 ______________________*/
@@ -90,7 +90,7 @@ ______________________*/
 #header-wrap{
 	background: @headerColor;
 	position:relative;
-	padding:15px;
+	padding:18px 15px 10px;
 }
 	.pattren-header{
 		background:url(../images/pattren-1.png) repeat-x;
@@ -111,6 +111,7 @@ ______________________*/
 		text-align:center;
 		width:30px;
 		height:30px;
+		margin-bottom:4px;
 		.radius(@baseRadius + 4px);
 		.opacity(1);
 		&:hover{
@@ -146,12 +147,12 @@ ______________________*/
 }
 .navbar{
 	.gradient(@navbarColor1, @navbarColor2);
-	padding:40px 0;
+	padding:45px 0 40px;
 	min-height:125px;
 	position:static;
 	margin-bottom:0;
 }
-.navbar-brand{
+.navbar > .container .navbar-brand{
 	padding:0;
 }
 .navbar-nav > {
@@ -159,14 +160,16 @@ ______________________*/
 		margin-left:4px;
 		> a{
 			display: inline-block;
-			padding: 6px 12px;
+			padding: 6px 15px;
 			white-space: nowrap;
+			line-height:32px;
 			vertical-align: middle;
 			cursor: pointer;
 			border: 1px solid #d6d6d6;
 			color: @gray;
 			.radius(@baseRadius);
 			.gradient(#fbfbfb, #d7d7d7);
+			.box-shadow(0 0 0 1px rgba(255,255,255,0.5) inset);
 			&:hover,
 			&:focus{
 				text-shadow:none;
@@ -176,7 +179,7 @@ ______________________*/
 			}
 			[class^="icon-"]{
 				font-size:1.5em;
-				line-height:20px;
+				line-height:32px;
 			}
 		}
 
@@ -411,6 +414,7 @@ ______________________*/
 	border-color: @btnBorder;
 	.radius(@baseRadius);
 	color: @gray;
+	font-size:@baseFont;
 }
 
 .btn{
@@ -443,14 +447,15 @@ ______________________*/
 #footer-wrap{
 	.theme-gradient;
 	h3{
-		color: #bc4b00;
 		margin-bottom:25px;
 	}
 	a{
-		color: #774f21;
+		color: @browndark;
+		&:hover{
+			color: @themeColor;
+		}
 	}
 	.inner-section{
-		padding:40px 0;
 	}
 	.social-icons{
 		a{
@@ -461,6 +466,39 @@ ______________________*/
 #footer{
 	background:url(../images/footer.png) no-repeat center bottom;
 	min-height:370px;
+	padding:40px 0 80px;
+	.feature-text{
+		margin-left:65px;
+	}
+	.feature-img{
+		width:55px;
+	}
+}
+
+.feature-section{
+	border-bottom:1px solid #dac56f;
+	.box-shadow(0 1px 0 0 rgba(255,255,255,0.5));
+	padding-bottom:6px;
+	margin-bottom:13px;
+	&:last-child{
+		border-bottom:none;
+		.box-shadow(none);
+	}
+}
+.feature-img{
+	float:left;
+	border:1px solid @yellowdark;
+	background: #fbe99d;
+	padding:4px;
+	margin-right:10px;
+	margin-bottom: 10px;
+}
+.feature-text{
+	p{
+		color: @footerColor;
+		font-size:12px;
+		margin-bottom:10px;
+	}
 }
 
 
@@ -576,7 +614,12 @@ ______________________*/
 /**********************
 	 Global Classes
  **********************/
- 
+ .text-sm{
+	 font-size: 12px;
+}
+	.black-text{
+		color:black !important;
+	}
 .fl{ float:left}
 .fr{ float:right}
 .cl{ clear:both; font-size:0; height:0; }
@@ -620,6 +663,20 @@ ______________________*/
 	background-size: 97% auto;
 	padding-bottom:35px;
 }
+.navbar{
+	min-height:inherit;
+	padding:30px 0;
+}
+.navbar > .container .navbar-brand{
+	width:200px;
+}
+.navbar-nav li > a{
+	padding:6px 10px;
+	line-height:20px;
+}
+.navbar-nav li > a [class^="icon-"]{
+	line-height:20px;
+}
 
 }
 @media (max-width: 767px) {
@@ -627,7 +684,10 @@ ______________________*/
 	background-size: 93% auto;
 	padding-bottom:35px;
 }
-
+.navbar > .container .navbar-brand{
+	margin-left:15px;
+	width:auto;
+}
 .navbar-nav > {
 	li{
 		> a{
@@ -658,6 +718,9 @@ ______________________*/
 	}
 }
 
+.navbar{
+	padding:30px 0 25px;
+}	
 
 /**********************
 	 Theme Tabs
@@ -672,5 +735,19 @@ ______________________*/
 	background-size: 90% auto;
 	padding-bottom:35px;
 }
+.navbar > .container .navbar-brand{
+	margin-top:5px;
+	margin-left:15px;
+	width:200px;
+	height:auto;
+}
+.navbar-header .navbar-toggle{
+	margin-bottom:0;
+}
+.navbar{
+	padding:20px 0;
+}	
+
+
 
 }
