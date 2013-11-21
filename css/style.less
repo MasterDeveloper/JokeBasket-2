@@ -542,6 +542,7 @@ ______________________*/
 ************************************/
 .btn{
 	.box-shadow(0 0 0 1px rgba(255,255,255,0.5) inset);	
+	overflow:hidden; text-overflow: ellipsis;
 	.radius(7px);
 	&:focus{
 		outline:none;
@@ -551,6 +552,9 @@ ______________________*/
 	.gradient(#f3ba7c, #e9a65d);
 	border:1px solid #d8904b;
 	color:white;
+	a{
+		color:white;
+	}
 	&:focus,
 	&:hover{
 		color:white;
@@ -650,6 +654,10 @@ ______________________*/
 		font-size:20px;
 		font-weight:700;
 		margin:0;
+		overflow:hidden;
+		white-space:nowrap;
+		text-overflow: ellipsis
+		
 	}
 	p{
 		margin-bottom:0;
@@ -934,7 +942,6 @@ ______________________*/
 
 .icons-list{
 	list-style:none;
-	padding:0;
 	padding:0 15px;
 	ul{
 		list-style:none;
@@ -959,7 +966,6 @@ ______________________*/
 
 .rtl .icons-list{
 	list-style:none;
-	padding:0;
 	margin:0;
 	ul{
 		list-style:none;
@@ -967,10 +973,12 @@ ______________________*/
 	}
 	li{
 		&:before{
-			background:url(../images/icon-list.png) no-repeat 10px 0;
+			background:url(../images/icon-list.png) no-repeat 0 0;
 			width:16px;
 			height:15px;
 			font-family: 'FontAwesome';
+			margin-left:10px;
+			margin-right:0;
 		}
 	}
 }
@@ -1209,14 +1217,19 @@ ______________________*/
 .navbar{
 	padding:30px 0 25px;
 }	
-
-/**********************
-	 Theme Tabs
- **********************/
-.theme-tabs{
-
+#sidebar{
+	text-align:center;
 }
-
+.icons-list{
+	text-align:left;
+}
+#sidebar,
+#contents{
+	padding:0 0 20px !important;
+}
+.joke-detail-section p{
+	font-size:16px;
+}
 }
 @media (max-width: 479px) {
 .shadow-bottom{
@@ -1235,7 +1248,11 @@ ______________________*/
 .navbar{
 	padding:20px 0;
 }	
-
-
+h1{
+	font-size:43px;
+}
+.btn{
+	margin-bottom:5px;
+}
 
 }
