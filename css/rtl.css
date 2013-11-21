@@ -91,6 +91,11 @@ fieldset[disabled] .btns {
 .rtl .icon-chevron-left:before {
   content: "\f054";
 }
+.rtl .navbar-nav li {
+  margin-right: 4px;
+  margin-left: 0;
+  float: right;
+}
 .rtl ul {
   padding-right: 0;
 }
@@ -144,6 +149,9 @@ fieldset[disabled] .btns {
     float: right;
   }
   .rtl .navbar-right {
+    float: none !important;
+  }
+  .rtl .navbar-nav li {
     float: none !important;
   }
 }

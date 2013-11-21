@@ -507,6 +507,7 @@ ______________________*/
   border-radius: 0 0 5px 5px;
 }
 .tab-content .content-section {
+  font-size: 14px;
   color: #666666;
   border: 1px solid #dad0ab;
   margin-bottom: 20px;
@@ -567,8 +568,9 @@ ______________________*/
 	Slider Settings 
 *******************************/
 .slider-wrap {
-  padding: 0 25px;
   position: relative;
+  padding: 15px 45px !important;
+  overflow: hidden;
 }
 .slider-content p {
   color: #947804;
@@ -578,7 +580,7 @@ ______________________*/
 .bx-controls-direction a {
   position: absolute;
   top: 50%;
-  left: -7px;
+  left: 10px;
   width: 23px;
   height: 23px;
   text-indent: 999999px;
@@ -589,7 +591,7 @@ ______________________*/
 .bx-controls-direction .bx-next {
   background: url(../images/right-arrow.png) no-repeat right top;
   left: auto;
-  right: -7px;
+  right: 10px;
 }
 /**********************************
 		Main Area Settings 
@@ -993,6 +995,7 @@ ______________________*/
 }
 .joke-footer {
   color: #834904;
+  font-size: 12px;
 }
 .joke-footer .icon-star {
   color: black;
